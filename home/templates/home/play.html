@@ -1,0 +1,77 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Play {% endblock %}
+
+{% block content %}
+<section class="bg-section-secondary overflow-hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-4 mr-4 text-right">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="disablePopup">
+                    <label class="custom-control-label" for="disablePopup">Disable Popup</label>
+                </div>
+            </div>
+            <div class="col-sm-12 text-center">
+                <div class="logo col-12">
+                    <img src="{% static 'home/img/playEvolution.svg' %}" height="100px">
+                    <div class="col-sm-12 px-4 py-4 text-center">
+                        <button href="#" class="btn btn-soft-primary btn-sm btn-icon" data-toggle="modal"
+                            data-target="#exampleModal">
+                            <span class="btn-inner--icon">
+                                <i class="fi fi-player-settings"></i>
+                            </span>
+                            <span class="btn-inner--text">How to Play</span>
+                        </button>
+
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">How to</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ol class="text-left">
+                                        <li>Click to expand or collapse nodes in the tree.</li>
+                                        <li>Disable Popup for smoother play </li>
+                                        <li>Task : Find parent node (Blue Dot) <i>i.e., Life</i> (when you click on it rest other
+                                            nodes collapsed). </li>
+                                            
+                                    </ol>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-danger"
+                                        data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="mt-4" id="score">0</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="bg-section-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block other %}
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="https://unpkg.com/wtf_wikipedia"></script>
+<script src="{% static 'home/js/play.js' %}"></script>
+{% endblock %}

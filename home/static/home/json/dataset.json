@@ -1,0 +1,655 @@
+{
+    "name": "life",
+    "children": [
+        {
+            "name": "Bacteria",
+            "size": 9000
+        },
+        {
+            "name": "Eukaryote",
+            "children": [
+                {
+                    "name": "Animal Kingdom",
+                    "children": [
+                        {
+                            "name": "cnideria",
+                            "size": 7854
+                        },
+                        {
+                            "name": "porifera",
+                            "size": 4598
+                        },
+                        {
+                            "name": "Bacteria",
+                            "children": [
+                                {
+                                    "name": "Deuterostomes",
+                                    "children": [
+                                        {
+                                            "name": "echinodermata",
+                                            "size": 6458
+                                        },
+                                        {
+                                            "name": "chordata",
+                                            "children": [
+                                                {
+                                                    "name": "pikaia",
+                                                    "size": 6548
+                                                },
+                                                {
+                                                    "name": "vertabrates",
+                                                    "children": [
+                                                        {
+                                                            "name": "agnatha",
+                                                            "size": 6548
+                                                        },
+                                                        {
+                                                            "name": "jawed fish",
+                                                            "children": [
+                                                                {
+                                                                    "name": "chondrichthyes",
+                                                                    "size": 6548
+                                                                },
+                                                                {
+                                                                    "name": "placodermi",
+                                                                    "size": 6548
+                                                                },
+                                                                {
+                                                                    "name": "bony fish",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "actinopterygii",
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "syngnathiformes",
+                                                                                    "size": 7894
+                                                                                },
+                                                                                {
+                                                                                    "name": "siluriformes",
+                                                                                    "size": 7894
+                                                                                },
+                                                                                {
+                                                                                    "name": "cypriniformes",
+                                                                                    "size": 7894
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "name": "sarcoptergii",
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "tiktaalik",
+                                                                                    "size": 7894
+                                                                                },
+                                                                                {
+                                                                                    "name": "tetrapods",
+                                                                                    "children": [
+                                                                                        {
+                                                                                            "name": "amphibian",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "caudata",
+                                                                                                    "size": 7894
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "anura",
+                                                                                                    "size": 7894
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "name": "amniotes",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "name": "synapsids",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "pelycosaur",
+                                                                                                            "size": 6544
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "name": "therapsida",
+                                                                                                            "children":[
+                                                                                                                {
+                                                                                                                    "name": "cynodonts",
+                                                                                                                    "children":[
+                                                                                                                        {
+                                                                                                                            "name": "mammal",
+                                                                                                                            "children":[
+                                                                                                                                {
+                                                                                                                                    "name": "monotremata",
+                                                                                                                                    "size": 6544
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "theria",
+                                                                                                                                    "children":[
+                                                                                                                                        {
+                                                                                                                                            "name": "marsupials",
+                                                                                                                                            "children":[
+                                                                                                                                                {
+                                                                                                                                                    "name": "dedelphimorphia",
+                                                                                                                                                    "size": 6544
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "name": "diprotodontia",
+                                                                                                                                                    "children":[
+                                                                                                                                                        {
+                                                                                                                                                            "name": "thylacomyidae",
+                                                                                                                                                            "size": 6544
+                                                                                                                                                        },
+                                                                                                                                                        {
+                                                                                                                                                            "name": "diprotodontidae",
+                                                                                                                                                            "size": 6544
+                                                                                                                                                        },
+                                                                                                                                                        {
+                                                                                                                                                            "name": "macropodidae",
+                                                                                                                                                            "size": 6544
+                                                                                                                                                        },
+                                                                                                                                                        {
+                                                                                                                                                            "name": "phascolarctidae",
+                                                                                                                                                            "size": 6544
+                                                                                                                                                        }
+
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "name": "placentals",
+                                                                                                                                            "children":[
+                                                                                                                                                {
+                                                                                                                                                    "name": "atlantogeneta",
+                                                                                                                                                    "children":[
+                                                                                                                                                        {
+                                                                                                                                                            "name": "xenarthra",
+                                                                                                                                                            "children":[
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "cingulata",
+                                                                                                                                                                    "size": 6544
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "pilosa",
+                                                                                                                                                                    "size": 6544
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        },
+                                                                                                                                                        {
+                                                                                                                                                            "name": "afrotheria",
+                                                                                                                                                            "children": [
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "loxodonta",
+                                                                                                                                                                    "size": 6544
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "elephas",
+                                                                                                                                                                    "size": 6544
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "mammuthus",
+                                                                                                                                                                    "size": 6544
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "name": "boreoeutheria",
+                                                                                                                                                    "children":[
+                                                                                                                                                        {
+                                                                                                                                                            "name": "supraprimates",
+                                                                                                                                                            "children":[
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "lagomorpha",
+                                                                                                                                                                    "size": 6544
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "supraprimates",
+                                                                                                                                                                    "children":[
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "muridae",
+                                                                                                                                                                            "size": 6544
+                                                                                                                                                                        },
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "sciuridae",
+                                                                                                                                                                            "size": 6544
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "apes",
+                                                                                                                                                                    "children":[
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "gibbons",
+                                                                                                                                                                            "size": 5455
+                                                                                                                                                                        },
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "gorilla",
+                                                                                                                                                                            "size": 4545
+                                                                                                                                                                        },
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "homosapiens",
+                                                                                                                                                                            "size": 4900
+                                                                                                                                                                        },
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "chimpanzee",
+                                                                                                                                                                            "size": 5545
+                                                                                                                                                                        },
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "homo habillis",
+                                                                                                                                                                            "size": 6900
+                                                                                                                                                                        },
+                                                                                                                                                                        {
+                                                                                                                                                                            "name": "orangutans",
+                                                                                                                                                                            "size": 7900
+                                                                                                                                                                        }
+                                                                                                                                                                    ]
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                            ]
+                                                                                                                                                        },
+                                                                                                                                                        {
+                                                                                                                                                            "name": "carnivora",
+                                                                                                                                                            "children":[
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "hynas",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "tiger",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "sea lions",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "bear",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "hippopotamus",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "lion",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "fox",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "bison",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "deer",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "whale",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                },
+                                                                                                                                                                {
+                                                                                                                                                                    "name": "dolphins",
+                                                                                                                                                                    "size": 10000
+                                                                                                                                                                }
+                                                                                                                                                            ]
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                },
+                                                                                                {
+                                                                                                    "name": "sauropsids",
+                                                                                                    "children": [
+                                                                                                        {
+                                                                                                            "name": "reptiles",
+                                                                                                            "children": [
+                                                                                                                {
+                                                                                                                    "name": "testudines",
+                                                                                                                    "size": 7894
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "pterosaur",
+                                                                                                                    "size": 6544
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "plesiosaur",
+                                                                                                                    "size": 7894
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "squamata",
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "serpentes",
+                                                                                                                            "size": 6544
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "Chamaeleonidae",
+                                                                                                                            "size": 6544
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "gekkonidae",
+                                                                                                                            "size": 6544
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "crocodilia",
+                                                                                                                    "size": 6544
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "name": "dinosaurs",
+                                                                                                                    "children": [
+                                                                                                                        {
+                                                                                                                            "name": "ornithischia",
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "stegosauridae",
+                                                                                                                                    "size": 6544
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "ceratopsidae",
+                                                                                                                                    "size": 6544
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                            "name": "saurischia",
+                                                                                                                            "children": [
+                                                                                                                                {
+                                                                                                                                    "name": "therapods",
+                                                                                                                                    "children": [
+                                                                                                                                        {
+                                                                                                                                            "name": "dromaeosauridae",
+                                                                                                                                            "size": 6544
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "name": "tyrannosauridae",
+                                                                                                                                            "size": 6544
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "name": "avian",
+                                                                                                                                            "children": [
+                                                                                                                                                {
+                                                                                                                                                    "name": "galliformes",
+                                                                                                                                                    "size": 6544
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "name": "anseriformes",
+                                                                                                                                                    "size": 6544
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "name": "archaeopteryx",
+                                                                                                                                                    "size": 6544
+                                                                                                                                                },
+                                                                                                                                                {
+                                                                                                                                                    "name": "neoaves",
+                                                                                                                                                   "children":[
+                                                                                                                                                    {
+                                                                                                                                                        "name": "trigiformes",
+                                                                                                                                                        "size": 6544
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                        "name": "sphenisciformes",
+                                                                                                                                                        "size": 6544
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                        "name": "psittaciformes",
+                                                                                                                                                        "size": 6544
+                                                                                                                                                    }
+
+                                                                                                                                                   ]
+                                                                                                                                                }
+                                                                                                                                            ]
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "name": "sauropods",
+                                                                                                                                    "children":[
+                                                                                                                                        {
+                                                                                                                                            "name": "diplodocidae",
+                                                                                                                                            "size": 6544
+                                                                                                                                        },
+                                                                                                                                        {
+                                                                                                                                            "name": "brachiosauridae",
+                                                                                                                                            "size": 6544
+                                                                                                                                        }
+                                                                                                                                    ]
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Protostomes",
+                                    "children": [
+                                        {
+                                            "name": "annelida",
+                                            "size": 6585
+                                        },
+                                        {
+                                            "name": "nematoda",
+                                            "size": 7845
+                                        },
+                                        {
+                                            "name": "anthropoda",
+                                            "children": [
+                                                {
+                                                    "name": "insect",
+                                                    "children": [
+                                                        {
+                                                            "name": "diptera",
+                                                            "size": 6548
+                                                        },
+                                                        {
+                                                            "name": "orthoptera",
+                                                            "size": 6548
+                                                        },
+                                                        {
+                                                            "name": "lepidoptera",
+                                                            "size": 6548
+                                                        },
+                                                        {
+                                                            "name": "Hymenoptera",
+                                                            "children": [
+                                                                {
+                                                                    "name": "formicidae",
+                                                                    "size": 3645
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "mollusca",
+                                            "children": [
+                                                {
+                                                    "name": "octopoda",
+                                                    "size": 3654
+                                                },
+                                                {
+                                                    "name": "teuthida",
+                                                    "size": 7869
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Fungus",
+                    "children": [
+                        {
+                            "name": "Yeast",
+                            "size": 8012
+                        },
+                        {
+                            "name": "Mushroom",
+                            "size": 4561
+                        },
+                        {
+                            "name": "mould",
+                            "size": 6758
+                        }
+                    ]
+                },
+                {
+                    "name": "Plant",
+                    "children":[
+                        {
+                            "name": "angiosperm",
+                            "children":[
+                                {
+                                    "name": "tulips",
+                                    "size": 4000
+                                },
+                                {
+                                    "name": "daffodils",
+                                    "size": 6000
+                                },
+                                {
+                                    "name": "rice",
+                                    "size": 2000
+                                },
+                                {
+                                    "name": "grasses",
+                                    "size": 5000
+                                },
+                                {
+                                    "name": "lilies",
+                                    "size": 6000
+                                },
+                                {
+                                    "name": "orchids",
+                                    "size": 7000
+                                },
+                                {
+                                    "name": "wheat",
+                                    "size": 8000
+                                },
+                                {
+                                    "name": "pine apple",
+                                    "size": 9000
+                                },
+                                {
+                                    "name": "banana",
+                                    "size": 5000
+                                }
+                            ]
+                        },
+                        {
+                            "name": "gymnosperm",
+                            "children":[
+                                {
+                                    "name": "pine",
+                                    "size": 2000
+                                },
+                                {
+                                    "name": "cyprus",
+                                    "size": 2000
+                                },
+                                {
+                                    "name": "ginkgo",
+                                    "size": 200
+                                },
+                                {
+                                    "name": "Zamia",
+                                    "size": 1000
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Amoeba",
+                    "size": 4561
+                },
+                {
+                    "name": "Choanoflagellate",
+                    "size": 4561
+                },
+                {
+                    "name": "Water mould",
+                    "size": 3561
+                },
+                {
+                    "name": "Slime mould",
+                    "size": 5661
+                },
+                {
+                    "name": "Rhidiphyta",
+                    "size": 2861
+                }
+            ]
+        },
+        {
+            "name": "Archaea",
+            "children": [
+                {
+                    "name": "Euryarchaeota",
+                    "children": [
+                        {
+                            "name": "Methanogen",
+                            "size": 7012
+                        },
+                        {
+                            "name": "Halophiles",
+                            "size": 8012
+                        }
+                    ]
+                },
+                {
+                    "name": "Kararchaeota",
+                    "size": 9000
+                },
+                {
+                    "name": "Crenarchaeota",
+                    "children": [
+                        {
+                            "name": "Thermophiles",
+                            "size": 8456
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

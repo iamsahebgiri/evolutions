@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/css/lib/ace.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/main.css' %}" />
+    <title>Suuegst something</title>
+</head>
+
+<body>
+    <section class="bg-section-secondary overflow-hidden">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="logo col-12">
+                        <img class="mt-4" src="{% static 'home/img/suggestEvolution.svg' %}" height="100px">
+
+                        <h4 class="text-center mt-4">How was your overall experience?</h4>
+                    <h4 class="text-center">Any new features to add?</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% load widget_tweaks %}
+    <section class="bg-section-secondary overflow-hidden">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="container">
+                    <form method="POST" class="post-form" action="">
+                        {% csrf_token %}
+
+                        {% for hidden_field in form.hidden_fields %}
+                        {{ hidden_field }}
+                        {% endfor %}
+
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {% for error in form.non_field_errors %}
+                            {{ error }}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+                        {% for field in form.visible_fields %}
+                        <div class="form-group">
+                            {{ field.label_tag }}
+
+                            {% if form.is_bound %}
+                            {% if field.errors %}
+                            {% render_field field class="form-control is-invalid" %}
+                            {% for error in field.errors %}
+                            <div class="invalid-feedback">
+                                {{ error }}
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            {% render_field field class="form-control is-valid" %}
+                            {% endif %}
+                            {% else %}
+                            {% render_field field class="form-control" %}
+                            {% endif %}
+
+                            {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+
+                        <input type="submit" value="Send" class="btn mb-6 btn-sm btn-soft-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

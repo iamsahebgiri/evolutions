@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'home/css/lib/ace.css' %}" />
+    <script src="{% static 'home/js/lib/ace.core.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <!-- Path for json dataset -->
+    <script>
+            var dataset = "{% static 'home/json/dataset.json' %}";
+    </script>
+
+</head>
+
+<body>
+    <div id="app">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+<!-- <script src="{% static 'home/js/timeline.js' %}"></script> -->
+
+<link rel="stylesheet" href="{% static 'home/css/main.css' %}" />
+{% block other %}
+{% endblock %}
+</html>

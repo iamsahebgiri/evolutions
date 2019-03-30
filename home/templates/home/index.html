@@ -1,0 +1,279 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Evolution - Tracing evolution of living beings {% endblock %}
+
+{% block content %}
+<main class="container-fluid bg-section-secondary">
+<div class="row">
+  <div class="col-sm-12 logo text-center">
+      <div class="col"><img class="mt-4 mb-4" src="{% static 'home/img/evolution.svg' %}" height="80px"></div>
+      <div class="w-100"></div>
+      <div class="col d-flex justify-content-center">
+          <ul class="nav nav-pills nav-pills-circle nav-justified">
+              <li class="nav-item hover-translate-y-n3 square" title="Read by Evolution">
+                  <a class="nav-link active hover-shadow-lg" href="read">
+                      <i class="fi fi-prescription" style="font-size: 40px;"></i>
+                      
+                  </a>
+              </li>
+              <li class="nav-item hover-translate-y-n3 square" title="Play by Evolution">
+                  <a class="nav-link active hover-shadow-lg" href="play" >
+                      <i class="fi fi-laboratory" style="font-size: 40px;"></i>
+                  </a>
+              </li>
+              
+              <li class="nav-item hover-translate-y-n3 square" title="Suggest and Feedback">
+                  <a class="nav-link active hover-shadow-lg" href="feedback">
+                      <i class="fi fi-fire" style="font-size: 40px;"></i>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+</main>
+<section class="slice slice-lg bg-section-secondary">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center mb-4">Timeline of Species</h1>
+      </div>
+      <div class="col-sm-3" style="height:460px;">
+        <div class="card h-100 p-3 custom-scroll overflow-auto">
+          <!-- <h4 class="text-center">Species</h4> -->
+          <button type="button" class="btn btn-secondary">
+            <span>Species</span>
+
+            <span class="badge badge-danger badge-pill badge-floating border-white">
+              [[ species.length ]]
+            </span>
+          </button>
+          <hr class="divider divider-fade" />
+          <div class="list-group m-br-0 left-panel-list">
+            <button type="button" v-for="sp in species" :key="sp.id" @click="generateSeries(sp.id)"
+              class="list-group-item list-group-item-action hover-shadow-lg hover-scale-90 m-lt-blue">
+              <div class="media align-items-center">
+                <div class="mr-3">
+                  <img :alt="sp.name" :src="sp.avatar" class="avatar rounded-circle" />
+                </div>
+                <div class="media-body text-limit">
+                  <h6 class="text-sm d-block text-limit mb-0">
+                    [[ sp.name ]]
+                  </h6>
+                  <span class="d-block text-sm">
+                    [[ sp.subtitle ]]
+                  </span>
+                </div>
+              </div>
+            </button>
+
+          </div>
+          <hr class="divider divider-fade" />
+          <button type="button" class="btn btn-soft-info btn-sm" @click="howToUse" style="margin-bottom:0;">
+            How to use
+          </button>
+
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="card h-100">
+          <div id="timeline">
+            <apexchart type=bubble height=350 :options="chartOptions" :series="series" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slice slice-lg bg-section-secondary overflow-hidden">
+  <div class="bg-absolute-cover bg-size--contain d-flex align-items-center">
+    <figure class="w-100">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 820" class="injected-svg svg-inject"
+        style="height: 1000px;">
+        <path class="fill-cyan"
+          d="M 177.67 511.271 L 144.933 477.895 C 141.713 474.613 141.713 469.414 144.933 466.132 L 177.67 432.758 C 180.89 429.474 185.989 429.474 189.209 432.758 L 221.946 466.132 C 225.167 469.414 225.167 474.613 221.946 477.895 L 189.209 511.271 C 186.257 514.553 180.89 514.553 177.67 511.271 Z">
+        </path>
+        <circle class="fill-pink" cx="1209.162" cy="110.471" r="34.859"></circle>
+        <circle class="fill-yellow" stroke-width="3" stroke-miterlimit="10" cx="333.261" cy="222.266" r="25.344">
+        </circle>
+        <path class="fill-blue"
+          d="M 49.669 -9.998 C 51.03 -13.511 54.16 -16.03 57.882 -16.608 L 92.738 -22.023 C 96.459 -22.602 100.206 -21.149 102.568 -18.217 L 124.686 9.261 C 127.047 12.196 127.665 16.166 126.305 19.679 L 113.567 52.571 C 112.206 56.084 109.075 58.604 105.354 59.184 L 70.498 64.599 C 66.777 65.177 63.029 63.727 60.668 60.791 L 38.55 33.314 C 36.189 30.378 35.571 26.408 36.931 22.895 L 49.669 -9.998 Z">
+        </path>
+        <path class="fill-pink"
+          d="M 1032.318 376.476 C 1033.264 374.034 1035.44 372.282 1038.028 371.88 L 1062.261 368.116 C 1064.848 367.713 1067.453 368.723 1069.095 370.762 L 1084.472 389.865 C 1086.114 391.906 1086.544 394.666 1085.598 397.108 L 1076.742 419.976 C 1075.796 422.418 1073.619 424.17 1071.032 424.574 L 1046.799 428.338 C 1044.212 428.74 1041.606 427.732 1039.965 425.691 L 1024.588 406.588 C 1022.946 404.547 1022.517 401.787 1023.462 399.344 L 1032.318 376.476 Z">
+        </path>
+        <path class="fill-purple"
+          d="M 1396.93 665.688 C 1399.95 657.893 1406.894 652.305 1415.153 651.022 L 1492.489 639.008 C 1500.744 637.723 1509.057 640.947 1514.298 647.453 L 1563.372 708.418 C 1568.611 714.931 1569.981 723.739 1566.965 731.533 L 1538.703 804.512 C 1535.683 812.306 1528.736 817.897 1520.48 819.184 L 1443.144 831.199 C 1434.887 832.481 1426.573 829.264 1421.334 822.75 L 1372.26 761.786 C 1367.022 755.272 1365.65 746.463 1368.668 738.668 L 1396.93 665.688 Z">
+        </path>
+        <path class="fill-purple"
+          d="M 264.129 775.914 C 265.075 773.472 267.251 771.72 269.839 771.318 L 294.072 767.554 C 296.659 767.151 299.264 768.161 300.906 770.2 L 316.283 789.303 C 317.925 791.344 318.355 794.104 317.409 796.546 L 308.553 819.414 C 307.607 821.856 305.43 823.608 302.843 824.012 L 278.61 827.776 C 276.023 828.178 273.417 827.17 271.776 825.129 L 256.399 806.026 C 254.757 803.985 254.328 801.225 255.273 798.782 L 264.129 775.914 Z">
+        </path>
+        <circle class="fill-cyan" stroke-width="3" stroke-miterlimit="10" cx="745.931" cy="783.228" r="25.344"></circle>
+        <path class="fill-purple"
+          d="M 929.895 57.225 C 930.389 55.951 931.524 55.036 932.875 54.826 L 945.523 52.862 C 946.873 52.652 948.232 53.179 949.089 54.243 L 957.115 64.213 C 957.972 65.278 958.196 66.719 957.702 67.993 L 953.08 79.928 C 952.587 81.203 951.45 82.117 950.1 82.328 L 937.453 84.293 C 936.103 84.502 934.742 83.976 933.886 82.911 L 925.86 72.941 C 925.004 71.876 924.78 70.435 925.273 69.16 L 929.895 57.225 Z">
+        </path>
+      </svg>
+    </figure>
+  </div>
+  <div class="container position-relative zindex-100">
+    <div class="mb-5 px-3 text-center">
+      <span class="badge badge-soft-success badge-pill badge-lg">
+        Behind the Scene
+      </span>
+      <h3 class=" mt-4">HackBencheners</h3>
+      <div class="fluid-paragraph mt-3">
+        <p class="lead lh-180">Tracing evolution of living beings</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card px-3">
+          <div class="card-body py-5">
+            <div class="d-flex align-items-center">
+              <div class="icon bg-gradient-primary text-white rounded-circle icon-shape shadow-primary">
+                <i class="fi fi-python"></i>
+              </div>
+              <div class="icon-text pl-4">
+                <h5 class="mb-0">Django</h5>
+              </div>
+            </div>
+            <p class="mt-4 mb-0">Django helped me in creating REST API which is really easy and fast with its django
+              rest Framework.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card px-3">
+          <div class="card-body py-5">
+            <div class="d-flex align-items-center">
+              <div class="icon bg-gradient-warning text-white rounded-circle icon-shape shadow-warning">
+                <i class="fi fi-vuejs"></i>
+              </div>
+              <div class="icon-text pl-4">
+                <h5 class="mb-0">Vue js</h5>
+              </div>
+            </div>
+            <p class="mt-4 mb-0">For frontend part I have selected Vue for its simplicity, scalability and fast learning curve over React.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card px-3">
+          <div class="card-body py-5">
+            <div class="d-flex align-items-center">
+              <div class="icon bg-gradient-info text-white rounded-circle icon-shape shadow-info">
+                  <i class="fi fi-stack-overflow"></i>
+              </div>
+              <div class="icon-text pl-4">
+                <h5 class="mb-0">Stack Overflow</h5>
+              </div>
+            </div>
+            <p class="mt-4 mb-0">It is easy to stuck most often in programming. This site solved half of my problem. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slice slice-lg vh-100">
+    <div class="container">
+      <div class="row row-grid justify-content-around align-items-center">
+        <div class="col-lg-12 mb-4 text-center">
+          <h1>About me</h1>
+        </div>
+        <div class="col-lg-5">
+          <div class="">
+            <h5 class=" h3">I will be happy to talk with you</h5>
+            <p class="lead my-4">If you are not shy, feel free to send message in any of my social accounts. Before that how about knowing my interests.</p>
+            <ul class="list-unstyled">
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-shape icon-primary icon-sm rounded-circle mr-3">
+                        <i class="fi fi-fire"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="h6 mb-0">Startup Enthusiast</span>
+                  </div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-shape icon-warning icon-sm rounded-circle mr-3">
+                        <i class="fi fi-code"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="h6 mb-0">Coding</span>
+                  </div>
+                </div>
+              </li>
+              <li class="py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div class="icon icon-shape icon-success icon-sm rounded-circle mr-3">
+                        <i class="fi fi-acrobat-reader"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="h6 mb-0">Reading Books</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                  <div class="text-center">
+      
+                    <a href="#" class="avatar rounded-circle avatar-lg">
+                      <img alt="Image placeholder" src="{% static 'home/img/sahebgiri.jpg' %}" class="">
+      
+                    </a>
+                    <h5 class=" mt-4 mb-0">Saheb Giri</h5>
+                    <span class="d-block text-muted">Student</span>
+                    <p class="mt-3 lh-180">Lets talk about ideas.</p>
+                    <div class="mt-3 pt-4 delimiter-top">
+                      <ul class="nav justify-content-center mt-3">
+                        <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://www.instagram.com/iamsahebgiri/"><i class="fi fi-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://www.facebook.com/iamsahebgiri"><i class="fi fi-facebook"></i></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://github.com/iamsahebgiri"><i class="fi fi-github"></i></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://twitter.com/iamsahebgiri"><i class="fi fi-twitter"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</section>
+<div id="loading" v-if="loading===true">
+    <div id="loading-icon" class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+</div>
+{% endblock %}
+
+{% block other %}
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+<script src="{% static 'home/js/app.js' %}"></script>
+{% endblock %}

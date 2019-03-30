@@ -1,0 +1,72 @@
+{% extends 'read/layout.html' %}
+
+{% block content %}
+<section class="bg-section-secondary overflow-hidden">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="logo col-12">
+          {% load static %}
+          <img class="mt-4" src="{% static 'home/img/readByEvolution.svg' %}" height="100px">
+          <div class="col-sm-12 px-4 py-4 text-center">
+            <a href="add" class="btn btn-soft-success btn-sm btn-icon">
+                <span class="btn-inner--icon">
+                    <i class="fi fi-plus-a"></i>
+                </span>
+                <span class="btn-inner--text">Add Post</span>
+              </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-section-secondary">
+    <div class="container">
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-sm-4">
+              <div class="card overflow-hidden" data-animate-hover="2" style="height:320px;">
+                <div class="overflow-hidden">
+                  <div class="animate-this">
+                    <a href="/read/details/{{post.id}}">
+                      <img src="{{post.thumbnail_url}}" alt="{{post.title}}" class="card-img-top">
+                    </a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row align-items-center mb-4">
+                    <div class="col">
+                      <span class="badge badge-pill badge-soft-success">evolution</span>
+                    </div>
+                    <div class="col text-right">
+                      <span class="text-muted">{{post.author}}</span>
+                    </div>
+                  </div>
+                  <a href="/read/details/{{post.id}}" class="h5">{{post.title}}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+</section>
+{% if msg %}
+<script>
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: 'btn btn-soft-info btn-sm',
+    },
+    buttonsStyling: false,
+  })
+  swalWithBootstrapButtons.fire({
+    html: '{{ msg }}',
+    title: '{{ type }}',
+    type: '{{ type }}',
+    width: 500,
+  })
+</script>
+{% endif %}
+
+{% endblock %}
